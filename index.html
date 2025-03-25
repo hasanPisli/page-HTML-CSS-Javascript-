@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <!-- zgjedhja e kohes  -->
+        <h2>When should we reach out?</h2>
+        <p>Pick a time that works best for you.</p>
+        <form id="timeForm">
+            <select id="timeSelect" required>
+                <option value="" disabled selected>Choose a time</option>
+                <option value="8 AM CST">8 AM</option>
+                <option value="9 AM CST">9 AM</option>
+                <option value="10 AM CST">10 AM</option>
+                <option value="11 AM CST">11 AM</option>
+                <option value="12 PM CST">12 PM</option>
+                <option value="1 PM CST">1 PM</option>
+                <option value="2 PM CST">2 PM</option>
+                <option value="3 PM CST">3 PM</option>
+                <option value="4 PM CST">4 PM</option>
+                <option value="5 PM CST">5 PM</option>
+            </select>
+            <button type="button" id="nextButton">That works for me </button>
+        </form>
+
+        <!-- te dhenat personale  (nuk shfaqen fillimisht ) -->
+        <div id="detailsFormContainer" class="hidden">
+            <h2>Add Your Personal Details </h2>
+          
+            <form id="detailsForm">
+                <input type="text" id="firstName" placeholder="First name" required>
+                <input type="text" id="lastName" placeholder="Last name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone number" required>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">
+                        I agree to be contacted about this request.  
+                        <a href="#">Privacy policy</a>
+                    </label>
+                </div>
+
+                <button type="submit">Let's do this! 🚀</button>
+            </form>
+        </div>
+
+        <!-- shfaqja e te dhenave  -->
+        <p id="confirmationMessage" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
